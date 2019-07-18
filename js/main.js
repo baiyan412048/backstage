@@ -25,7 +25,7 @@ const loading = document.getElementById('loading');
 // product
 // 取得產品資料
 function getProduct() {
-  if (window.location.pathname === '/product.html') {
+  if (window.location.pathname === '/backstage/product.html') {
     loading.style.display = 'flex';
   }
   const xhr = new XMLHttpRequest();
@@ -51,7 +51,7 @@ window.addEventListener('load', getProduct);
 function getProductsList() {
   let str = '';
 
-  if (window.location.pathname === '/product.html') {
+  if (window.location.pathname === '/backstage/product.html') {
     products.forEach((item) => {
       const originPriceFilter = item.origin_price.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
       const priceFilter = item.price.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
@@ -75,7 +75,7 @@ function getProductsList() {
 }
 
 // 刪除 & 編輯商品
-if (window.location.pathname === '/product.html') {
+if (window.location.pathname === '/backstage/product.html') {
   productsList.addEventListener('click', ((event) => {
     event.preventDefault();
     if (event.target.nodeName !== 'BUTTON') {
@@ -169,7 +169,7 @@ function openProductModal(activity, num) {
     }));
   }
 }
-if (window.location.pathname === '/product.html') {
+if (window.location.pathname === '/backstage/product.html') {
   newProductOpen.addEventListener('click', openProductModal);
   newProductClose.addEventListener('click', openProductModal);
 }
@@ -198,7 +198,7 @@ function addNewProduct() {
     }
   }));
 }
-if (window.location.pathname === '/product.html') {
+if (window.location.pathname === '/backstage/product.html') {
   newProductSubmit.addEventListener('click', addNewProduct);
 }
 
@@ -239,7 +239,7 @@ function toSelectProduct(event) {
     }));
   }
 }
-if (window.location.pathname === '/product.html') {
+if (window.location.pathname === '/backstage/product.html') {
   selectProduct.addEventListener('keyup', toSelectProduct);
   selectProductBtn.addEventListener('click', toSelectProduct);
 }
@@ -247,7 +247,7 @@ if (window.location.pathname === '/product.html') {
 // order
 // 取得訂單資料
 function getOrders() {
-  if (window.location.pathname === '/index.html' || window.location.pathname === '/orders.html') {
+  if (window.location.pathname === '/backstage/index.html' || window.location.pathname === '/backstage/orders.html') {
     loading.style.display = 'flex';
     const xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
@@ -276,7 +276,7 @@ function getOrdersList() {
   let product = '';
   let str = '';
 
-  if (window.location.pathname === '/orders.html') {
+  if (window.location.pathname === '/backstage/orders.html') {
     orders.forEach((item) => {
       if (item.is_paid) {
         ispaid = '已完成付款';
@@ -553,12 +553,12 @@ function openOrderModal() {
     newOrderPaid.textContent = '成功付款';
   };
 }
-if (window.location.pathname === '/orders.html') {
+if (window.location.pathname === '/backstage/orders.html') {
   newOrderOpen.addEventListener('click', openOrderModal);
 }
 
 // 檢驗訂單輸入欄位是否正確
-if (window.location.pathname === '/orders.html') {
+if (window.location.pathname === '/backstage/orders.html') {
   newOrderSubmit.addEventListener('click', ((event) => {
     let orderName = false;
     let orderAdd = false;
@@ -619,7 +619,7 @@ if (window.location.pathname === '/orders.html') {
 
 // 送出訂單資訊
 function submitNewOrder(event) {
-  if (window.location.pathname === '/orders.html') {
+  if (window.location.pathname === '/backstage/orders.html') {
     const toDay = new Date();
     tempNewOrder.createTime = `${toDay.getFullYear()}-${(`0${toDay.getMonth() + 1}`).substr(-2)}-${(`0${toDay.getDate()}`).substr(-2)}`;
     tempNewOrder.order_id = (() => {
@@ -688,12 +688,12 @@ function resetCart(event) {
     newOrderPaid.textContent = '確認付款';
   }
 }
-if (window.location.pathname === '/orders.html') {
+if (window.location.pathname === '/backstage/orders.html') {
   newOrderClose.addEventListener('click', resetCart);
 }
 
 // 刪除訂單
-if (window.location.pathname === '/orders.html') {
+if (window.location.pathname === '/backstage/orders.html') {
   orderList.addEventListener('click', ((event) => {
     event.preventDefault();
     if (event.target.nodeName !== 'BUTTON') {
@@ -749,7 +749,7 @@ function toSelectOrder(event) {
     }));
   }
 }
-if (window.location.pathname === '/orders.html') {
+if (window.location.pathname === '/backstage/orders.html') {
   selectOrder.addEventListener('keyup', toSelectOrder);
   selectOrderBtn.addEventListener('click', toSelectOrder);
 }
@@ -778,7 +778,7 @@ window.addEventListener('load', getCoupon());
 function getCouponList() {
   let str = '';
 
-  if (window.location.pathname === '/coupon.html') {
+  if (window.location.pathname === '/backstage/coupon.html') {
     const toDay = new Date();
     coupons.forEach((item) => {
       str += `
@@ -797,7 +797,7 @@ function getCouponList() {
 }
 
 // 刪除 & 編輯優惠劵
-if (window.location.pathname === '/coupon.html') {
+if (window.location.pathname === '/backstage/coupon.html') {
   couponList.addEventListener('click', ((event) => {
     event.preventDefault();
     if (event.target.nodeName !== 'BUTTON') {
@@ -867,7 +867,7 @@ function openCouponModal(activity, num) {
     isnew = true;
   }
 }
-if (window.location.pathname === '/coupon.html') {
+if (window.location.pathname === '/backstage/coupon.html') {
   newCouponOpen.addEventListener('click', openCouponModal);
   newCouponClose.addEventListener('click', openCouponModal);
 }
@@ -896,13 +896,13 @@ function addNewCoupon() {
     }
   }));
 }
-if (window.location.pathname === '/coupon.html') {
+if (window.location.pathname === '/backstage/coupon.html') {
   newCouponSubmit.addEventListener('click', addNewCoupon);
 }
 
 // 首頁分析
 function getIndexReport() {
-  if (window.location.pathname === '/index.html') {
+  if (window.location.pathname === '/backstage/index.html') {
     // 營業額
     const totalOrderPriceArr = [];
     orders.forEach((item) => {
