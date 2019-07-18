@@ -1,0 +1,13 @@
+.footer{
+  padding: 10px 0;
+  background-color: $teal;
+  color: $leaf;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 2px;
+  line-height: 22px;
+
+  & a{
+    color: $white;
+  }
+}

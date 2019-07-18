@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>手刻後台</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="loading" class="loading">
+    <div class="loader"></div>
+  </div>
+  <nav class="header">
+    <div>
+      <div class="header__logo">
+        <h1>
+          <a href="index.html">Succulent</a>
+        </h1>
+      </div>
+      <ul id="menu" class="header__menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="orders.html">ORDERS</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="coupon.html">COUPON</a></li>
+      </ul>
+      <div id="menuToggle" class="header__hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+  <div class="contant">
+    <div>
+      <div class="contant__overview">
+        <h2>總覽</h2>
+        <div class="contant__date">
+          <span>2045/12/31<i class="fas fa-caret-right"></i>2045/12/31</span>
+          <span>Weekly<i class="fas fa-caret-down"></i></span>
+        </div>
+      </div>
+      <div class="contant__revenue">
+        <div id="totalRevenueBtn" class="box-shadow">
+          <h4><i class="fas fa-hand-holding-usd"></i> 總營業額</h4>
+          <p id="totalRevenue">999,999,999</p>
+        </div>
+        <div id="hotProductBtn" class="box-shadow">
+          <h4><i class="fas fa-university"></i> 熱銷品</h4>
+          <p id="hotProduct">無</p>
+        </div>
+        <div id="totalOrderBtn" class="box-shadow">
+          <h4><i class="fas fa-money-bill"></i> 總訂單數量</h4>
+          <p id="totalOrder">999,999,999</p>
+        </div>
+      </div>
+      <div id="costinfo" class="costinfo">
+        <div class="costinfo__list">
+          <p>小型多肉 <span id="smallRevenue">[ $ 10,000 ]</span> <i class="fas fa-caret-down"></i></p>
+          <p id="smallstr"><span>肉多多　$5,000</span><span>肉多多　$5,000</span><span>肉多多　$5,000</span></p>
+          <p>大型多肉 <span id="bigRevenue">[ $ 10,000 ]</span> <i class="fas fa-caret-down"></i></p>
+          <p id="bigstr"><span>仙人掌　$5,000</span><span>仙人掌　$5,000</span><span>仙人掌　$5,000</span></p>
+          <p>多肉盆栽 <span id="potRevenue">[ $ 10,000 ]</span> <i class="fas fa-caret-down"></i></p>
+          <p id="potstr"><span>多肉聚寶盆　$5,000</span><span>多肉聚寶盆　$5,000</span></p>
+          <p>客製禮品 <span id="giftRevenue">[ $ 10,000 ]</span> <i class="fas fa-caret-down"></i></p>
+          <p id="giftstr"><span>財運好望來　$5,000</span></p>
+        </div>
+        <div class="costinfo__chart">
+          <canvas id="costChart"></canvas>
+        </div>
+      </div>
+      <div id="hotProducts" class="hotProducts">
+        <canvas id="hotProductChart"></canvas>
+      </div>
+      <div id="orderinfo" class="orderinfo">
+        <canvas id="orderChart"></canvas>
+      </div>
+      <div class="contant__report">
+        <h3>營業額分析</h3>
+        <div class="chart">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>資料、圖片、文章來源皆來自網路，僅用來做為學習用途。 by <a href="#">Baiyan</a></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

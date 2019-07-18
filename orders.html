@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>手刻後台</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="loading" class="loading">
+    <div class="loader"></div>
+  </div>
+  <div id="newOrder" class="neworder neworder--close">
+    <div class="neworder__block">
+      <div class="neworder__products">
+        <p>選購商品</p>
+        <ul id="orderProduct">
+          <li class="products">
+            <div class="products__img"></div>
+            <div class="products__info">
+              <p>小型多肉</p>
+              <p>肉多多</p>
+              <div class="products__price">
+                <del>$ 3,000</del>
+                <p>$ 2,000</p>
+              </div>
+              <form class="products__form" action="">
+                <select class="products__select" name="" id="">
+                  <option value="1">選購 1 盆</option>
+                </select>
+                <button id="addToCart" class="products__button" type="button">加入購物車</button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="neworder__order">
+        <p>新增訂單</p>
+        <form class="neworder__form" action="">
+          <label for="newOrderName">訂購人姓名 * <span id="newOrderNameCheck">訂購人姓名不得為空</span>
+            <input type="text" name="newOrderName" id="newOrderName" />
+          </label>
+          <label for="newOrderTel">訂購人電話 * <span id="newOrderTelCheck">訂購人電話不得為空</span>
+            <input type="tel" name="newOrderTel" id="newOrderTel" />
+          </label>
+          <label for="newOrderAdd">送貨地址 * <span id="newOrderAddCheck">訂購人地址不得為空</span>
+            <input type="text" name="newOrderAdd" id="newOrderAdd" />
+          </label>
+          <label for="newOrderEmail">訂購人電子郵件 * <span id="newOrderEmailCheck">訂購人電子郵件不得為空</span>
+            <input type="email" name="newOrderEmail" id="newOrderEmail" />
+          </label>
+          <div class="neworder__ordercheck">
+            <p>確認訂單：</p>
+            <div id="newOrderProductCheck" class="neworder__list">
+              <p>您尚未選購商品！</p>
+            </div>
+            <div class="neworder__price">
+              <p>總計： <span id="newOrderPrice">$ 0</span></p>
+              <div>
+                <input id="orderCoupon" type="text" />
+                <span>優惠劵：</span>
+                <span id="orderCouponCheck">輸入：code123，即可享 85 折優惠</span>
+              </div>
+            </div>
+          </div>
+          <div class="neworder__paidbutton">
+            <button id="newOrderPaid" type="button">確認付款</button>
+          </div>
+        </form>
+        <div class="neworder__button">
+          <button id="newOrderClose" type="button">取消</button><button id="newOrderSubmit" data-type="newOrderSubmit" type="button">送出</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="header">
+    <div>
+      <div class="header__logo">
+        <h1>
+          <a href="index.html">Succulent</a>
+        </h1>
+      </div>
+      <ul id="menu" class="header__menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="orders.html">ORDERS</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="coupon.html">COUPON</a></li>
+      </ul>
+      <div id="menuToggle" class="header__hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+  <main class="order">
+    <article>
+      <header class="order__title">
+        <div>
+          <h2>訂單列表</h2>
+          <label for="">
+            <i id="selectOrderBtn" class="fas fa-search"></i>
+            <input id="selectOrder" type="text" placeholder="請輸入訂單編號、訂購人姓名或電話">
+          </label>
+        </div>
+        <button id="newOrderOpen" type="button">建立新訂單</button>
+      </header>
+      <section class="order__list">
+        <ul id="orderList">
+          <li class="order__block">
+            <div class="order__date">
+              <p>2019 / 06 / 06</p>
+              <p></p>
+            </div>
+            <div class="order__guest">
+              <p>林大毛</p>
+              <p>0980-000-000</p>
+            </div>
+            <div class="order__products">
+              <p>肉多多× 3</p>
+              <p>仙人掌× 1</p>
+            </div>
+            <div class="order__price">
+              <div>
+                <p>$ 2,000</p>
+                <del>$ 4,000</del>
+              </div>
+              <p>已套用優惠卷</p>
+            </div>
+            <p>已完成付款</p>
+            <button type="button" class="order__button">刪除</button>
+          </li>
+          <li class="order__block">
+            <p>2019 / 06 / 06</p>
+            <div class="order__guest">
+              <p>王大毛</p>
+              <p>0980-000-000</p>
+            </div>
+            <div class="order__products">
+              <p>多肉聚寶盆× 1</p>
+            </div>
+            <div class="order__price">
+              <div>
+                <p>$ 2,000</p>
+              </div>
+            </div>
+            <p>未完成付款</p>
+            <button type="button" class="order__button">刪除</button>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>資料、圖片、文章來源皆來自網路，僅用來做為學習用途。 by <a href="#">Baiyan</a></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

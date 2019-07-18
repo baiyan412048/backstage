@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>手刻後台</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="loading" class="loading">
+    <div class="loader"></div>
+  </div>
+  <div id="newCoupon" class="newcoupon newcoupon--close">
+    <div class="newcoupon__info">
+      <p>新增優惠卷</p>
+      <form class="newcoupon__form" action="">
+        <label for="newCoupontCode">優惠卷代碼
+          <input type="text" name="newCoupontCode" id="newCoupontCode" />
+        </label>
+        <label for="newCoupontCost">折扣數
+          <input type="text" name="newCoupontCost" id="newCoupontCost" />
+        </label>
+      </form>
+      <div class="newcoupon__button">
+        <button id="newCouponClose" type="button">取消</button>
+        <button id="newCouponSubmit" type="button">送出</button>
+      </div>
+    </div>
+  </div>
+  <nav class="header">
+    <div>
+      <div class="header__logo">
+        <h1>
+          <a href="index.html">Succulent</a>
+        </h1>
+      </div>
+      <ul id="menu" class="header__menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="orders.html">ORDERS</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="coupon.html">COUPON</a></li>
+      </ul>
+      <div id="menuToggle" class="header__hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+  <main class="coupon">
+    <article>
+      <header class="coupon__title">
+        <div>
+          <h2>優惠劵列表</h2>
+        </div>
+        <button id="newCouponOpen" type="button">建立新優惠劵</button>
+      </header>
+      <section class="coupon__list">
+        <ul id="couponList">
+          <li class="coupon__block">
+            <p>2019/07/09</p>
+            <p>慶開幕</p>
+            <p>80%</p>
+            <form class="coupon__button">
+              <button>刪除</button>
+              <button>編輯</button>
+            </form>
+          </li>
+          <li class="coupon__block">
+            <p>2019/07/09</p>
+            <p>慶開幕</p>
+            <p>80%</p>
+            <form class="coupon__button">
+              <button>刪除</button>
+              <button>編輯</button>
+            </form>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>資料、圖片、文章來源皆來自網路，僅用來做為學習用途。 by <a href="#">Baiyan</a></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

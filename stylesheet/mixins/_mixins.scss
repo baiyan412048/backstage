@@ -1,0 +1,53 @@
+@mixin bg-cover() {
+  background-position: center center;
+  background-size: cover;
+};
+
+@mixin button($btn, $color) {
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: $btn;
+  padding: 5px 10px;
+  color: $color;
+  cursor: pointer;
+};
+
+@mixin revenue-blcok() {
+  border-radius: 1rem;
+  box-shadow: 4px 4px 12px -2px $gray;
+  background-color: #fff;
+};
+
+// min 以下
+@mixin media-breakpoint-xs {
+  @media (max-width: 576px) {
+    @content
+  }
+};
+
+@mixin media-breakpoint-md {
+  @media (max-width: 768px) {
+    @content
+  }
+};
+
+@mixin media-breakpoint-xl {
+  @media (max-width: 992px) {
+    @content
+  }
+};
+
+@mixin media-breakpoint-lg {
+  @media (max-width: 1200px) {
+    @content
+  }
+};
+
+//max 以上
+@mixin media-breakpoint-min($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content
+  }
+};

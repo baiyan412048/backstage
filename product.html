@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>手刻後台</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="loading" class="loading">
+    <div class="loader"></div>
+  </div>
+  <div id="newProduct" class="newproduct newproduct--close">
+    <div class="newproduct__info">
+      <p>新增產品</p>
+      <form class="newproduct__form" action="">
+        <label for="newProductName">產品名稱
+          <input type="text" name="newProductName" id="newProductTitle" />
+        </label>
+        <label for="newProductCategory">產品分類
+          <input type="text" name="newProductCategory" id="newProductCategory" />
+        </label>
+        <label for="newProductOriginPrice">原價
+          <input type="number" name="newProductOriginPrice" id="newProductOriginPrice" />
+        </label>
+        <label for="newProductPrice">售價
+          <input type="number" name="newProductPrice" id="newProductPrice" />
+        </label>
+        <label for="newProductUnit">單位
+          <input type="text" name="newProductUnit" id="newProductUnit" />
+        </label>
+        <label for="newProductIsnabled">是否啟用
+          <input type="checkbox" name="newProductIsnabled" id="newProductIsnabled" />
+        </label>
+        <label for="newProductImg">產品圖片( 僅限使用圖片網址 )
+          <input type="text" name="newProductImg" id="newProductImg" />
+        </label>
+        <img id="productImg" src="" alt="">
+      </form>
+      <div class="newproduct__button">
+        <button id="newProductClose" type="button">取消</button><button id="newProductSubmit" type="button">送出</button>
+      </div>
+    </div>
+  </div>
+  <nav class="header">
+    <div>
+      <div class="header__logo">
+        <h1>
+          <a href="index.html">Succulent</a>
+        </h1>
+      </div>
+      <ul id="menu" class="header__menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="orders.html">ORDERS</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="coupon.html">COUPON</a></li>
+      </ul>
+      <div id="menuToggle" class="header__hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+  <main class="product">
+    <article>
+      <header class="product__title">
+        <div>
+          <h2>產品列表</h2>
+          <label for="">
+            <i id="selectProductBtn" class="fas fa-search"></i>
+            <input id="selectProduct" type="text" placeholder="請輸入產品名稱、產品分類">
+          </label>
+        </div>
+        <button id="newProductOpen" type="button">建立新產品</button>
+      </header>
+      <section class="product__list">
+        <ul id="productsList">
+          <li class="product__block">
+            <div class="product__image"></div>
+            <div class="product__name">
+              <p>小型多肉</p>
+              <p>肉多多</p>
+            </div>
+            <p>$2,000</p>
+            <del>$4,000</del>
+            <form class="product__button">
+              <button>刪除</button>
+              <button>編輯</button>
+            </form>
+          </li>
+          <li class="product__block">
+            <div class="product__image"></div>
+            <div class="product__name">
+              <p>小型多肉</p>
+              <p>肉多多</p>
+            </div>
+            <p>$2,000</p>
+            <del>$4,000</del>
+            <form class="product__button">
+              <button>刪除</button>
+              <button>編輯</button>
+            </form>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+    <p>資料、圖片、文章來源皆來自網路，僅用來做為學習用途。 by <a href="#">Baiyan</a></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
